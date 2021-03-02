@@ -1,0 +1,70 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Status</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.example.nytpoc.utils</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Status (com.example.nytpoc.utils)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">Status</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.example.nytpoc.utils
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;data class Resource&lt;out T&gt;(val status: Status?, val data: T? = null, val message: String? = null) {
+<i>4</i>&nbsp;    companion object {
+<i>5</i>&nbsp;        fun &lt;T&gt; success(data: T?): Resource&lt;T&gt; {
+<i>6</i>&nbsp;            return Resource(Status.SUCCESS, data, null)
+<i>7</i>&nbsp;        }
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;        fun &lt;T&gt; error(msg: String, data: T?): Resource&lt;T&gt; {
+<i>10</i>&nbsp;            return Resource(Status.ERROR, data, msg)
+<i>11</i>&nbsp;        }
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;        fun &lt;T&gt; loading(data: T?): Resource&lt;T&gt; {
+<i>14</i>&nbsp;            return Resource(Status.LOADING, data, null)
+<i>15</i>&nbsp;        }
+<i>16</i>&nbsp;    }
+<i>17</i>&nbsp;}
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;enum class Status {
+<i>20</i>&nbsp;    SUCCESS,
+<i>21</i>&nbsp;    ERROR,
+<i>22</i>&nbsp;    LOADING
+<i>23</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-03-02 14:44</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: NetworkModule_OkHttpClientProviderFactory</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.example.nytpoc.di</a> ]
+</div>
+
+<h1>Coverage Summary for Class: NetworkModule_OkHttpClientProviderFactory (com.example.nytpoc.di)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">NetworkModule_OkHttpClientProviderFactory</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 6)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.example.nytpoc.di;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import dagger.internal.Factory;
+<i>4</i>&nbsp;import dagger.internal.Preconditions;
+<i>5</i>&nbsp;import javax.annotation.Generated;
+<i>6</i>&nbsp;import javax.inject.Provider;
+<i>7</i>&nbsp;import okhttp3.Interceptor;
+<i>8</i>&nbsp;import okhttp3.OkHttpClient;
+<i>9</i>&nbsp;import okhttp3.logging.HttpLoggingInterceptor;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;@Generated(
+<i>12</i>&nbsp;    value = &quot;dagger.internal.codegen.ComponentProcessor&quot;,
+<i>13</i>&nbsp;    comments = &quot;https://dagger.dev&quot;
+<i>14</i>&nbsp;)
+<i>15</i>&nbsp;@SuppressWarnings({
+<i>16</i>&nbsp;    &quot;unchecked&quot;,
+<i>17</i>&nbsp;    &quot;rawtypes&quot;
+<i>18</i>&nbsp;})
+<i>19</i>&nbsp;public final class NetworkModule_OkHttpClientProviderFactory implements Factory&lt;OkHttpClient&gt; {
+<i>20</i>&nbsp;  private final Provider&lt;Interceptor&gt; interceptorProvider;
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;  private final Provider&lt;HttpLoggingInterceptor&gt; httpLoggingInterceptorProvider;
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;  public NetworkModule_OkHttpClientProviderFactory(Provider&lt;Interceptor&gt; interceptorProvider,
+<b class="nc"><i>25</i>&nbsp;      Provider&lt;HttpLoggingInterceptor&gt; httpLoggingInterceptorProvider) {</b>
+<b class="nc"><i>26</i>&nbsp;    this.interceptorProvider = interceptorProvider;</b>
+<b class="nc"><i>27</i>&nbsp;    this.httpLoggingInterceptorProvider = httpLoggingInterceptorProvider;</b>
+<i>28</i>&nbsp;  }
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;  @Override
+<i>31</i>&nbsp;  public OkHttpClient get() {
+<b class="nc"><i>32</i>&nbsp;    return okHttpClientProvider(interceptorProvider.get(), httpLoggingInterceptorProvider.get());</b>
+<i>33</i>&nbsp;  }
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;  public static NetworkModule_OkHttpClientProviderFactory create(
+<i>36</i>&nbsp;      Provider&lt;Interceptor&gt; interceptorProvider,
+<i>37</i>&nbsp;      Provider&lt;HttpLoggingInterceptor&gt; httpLoggingInterceptorProvider) {
+<b class="nc"><i>38</i>&nbsp;    return new NetworkModule_OkHttpClientProviderFactory(interceptorProvider, httpLoggingInterceptorProvider);</b>
+<i>39</i>&nbsp;  }
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;  public static OkHttpClient okHttpClientProvider(Interceptor interceptor,
+<i>42</i>&nbsp;      HttpLoggingInterceptor httpLoggingInterceptor) {
+<b class="nc"><i>43</i>&nbsp;    return Preconditions.checkNotNull(NetworkModule.INSTANCE.okHttpClientProvider(interceptor, httpLoggingInterceptor), &quot;Cannot return null from a non-@Nullable @Provides method&quot;);</b>
+<i>44</i>&nbsp;  }
+<i>45</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-03-02 14:44</div>
+</div>
+</body>
+</html>
